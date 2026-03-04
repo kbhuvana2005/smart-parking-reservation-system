@@ -1,0 +1,100 @@
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  height: var(--navbar-height);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+
+.navbar-left h1 {
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Admin Profile */
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 2px solid var(--border);
+}
+
+.admin-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.admin-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.admin-role {
+  font-size: 11px;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 10px 20px;
+  background: rgba(233, 69, 96, 0.1);
+  color: var(--highlight);
+  border: 2px solid var(--highlight);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: var(--highlight);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-navbar {
+    left: 70px;
+    padding: 0 15px;
+  }
+
+  .navbar-left h1 {
+    font-size: 16px;
+  }
+
+  .admin-info {
+    display: none;
+  }
+}
