@@ -1,0 +1,44 @@
+.analytics-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.analytics-header h1 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.analytics-header p {
+  color: var(--grey);
+  font-size: 15px;
+}
+
+.chart-section {
+  background: white;
+  border-radius: var(--radius);
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+.chart-section h2 {
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .chart-section {
+    padding: 20px 15px;
+  }
+}

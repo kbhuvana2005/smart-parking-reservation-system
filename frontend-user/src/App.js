@@ -12,6 +12,7 @@ import MyBookings from './pages/MyBookings';
 import BookingDetails from './pages/BookingDetails';
 import Navbar from './components/Navbar';
 import NearMe from './pages/NearMe';
+import Profile from './pages/Profile';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
           
           <Route
             path="/dashboard"

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from '../api/axios';
-import ParkingMap from '../components/ParkingMap';
+// ❌ REMOVED: import ParkingMap from '../components/ParkingMap';
 import './ParkingSpots.css';
 
 function ParkingSpots() {
@@ -180,16 +180,15 @@ function ParkingSpots() {
   return (
     <div className="parking-spots-container">
 
-      {/* ✅ Page Header */}
+      {/* Page Header */}
       <div className="page-header">
-        <h1>🅿️ Parking Spots</h1>
-        <p>Click on any spot to view details or reserve</p>
+        <h1>🅿️ Find Parking</h1>
+        <p>Select a parking spot and reserve instantly</p>
       </div>
 
-      {/* ✅ Map Section */}
-      <ParkingMap />
+      {/* ❌ MAP REMOVED - No more <ParkingMap /> here */}
 
-      {/* ✅ Filters Section */}
+      {/* Filters Section */}
       <div className="filters-section">
         <div className="filters-grid">
           <select name="floor" value={filters.floor} onChange={handleFilterChange}>
@@ -223,7 +222,7 @@ function ParkingSpots() {
         </div>
       </div>
 
-      {/* ✅ Legend */}
+      {/* Legend */}
       <div className="spots-legend">
         <div className="legend-item">
           <div className="legend-dot available"></div>
@@ -243,7 +242,7 @@ function ParkingSpots() {
         </div>
       </div>
 
-      {/* ✅ SPOTS GRID - Small rectangle boxes */}
+      {/* SPOTS GRID */}
       <div className="spots-grid">
         {filteredSpots.length > 0 ? (
           filteredSpots.map(spot => {
@@ -254,21 +253,14 @@ function ParkingSpots() {
                 className={`spot-card ${!spot.isAvailable ? 'occupied' : ''}`}
                 onClick={() => handleSpotClick(spot)}
               >
-                {/* Color Bar at top */}
                 <div className={`spot-card-bar ${status.className}`}></div>
 
-                {/* Card Body */}
                 <div className="spot-card-body">
-
-                  {/* Spot Number */}
                   <span className="spot-number">{spot.spotNumber}</span>
-
-                  {/* Status Badge */}
                   <span className={`availability ${status.className}`}>
                     {status.text}
                   </span>
 
-                  {/* Details */}
                   <div className="spot-details">
                     <div className="spot-detail-row">
                       <span className="detail-label">Floor</span>
@@ -293,7 +285,6 @@ function ParkingSpots() {
                   </div>
                 </div>
 
-                {/* Click Hint */}
                 <div className="click-hint">
                   {spot.isAvailable ? '👆 Book' : '👆 Details'}
                 </div>
@@ -305,7 +296,7 @@ function ParkingSpots() {
         )}
       </div>
 
-      {/* ✅ INFO MODAL - Reserved Spot Details */}
+      {/* INFO MODAL - Reserved Spot Details */}
       {showInfoModal && selectedSpot && (
         <div className="modal-overlay" onClick={() => setShowInfoModal(false)}>
           <div className="modal-content info-modal" onClick={(e) => e.stopPropagation()}>
@@ -391,7 +382,7 @@ function ParkingSpots() {
         </div>
       )}
 
-      {/* ✅ BOOKING MODAL */}
+      {/* BOOKING MODAL */}
       {showBookingModal && selectedSpot && (
         <div className="modal-overlay" onClick={() => setShowBookingModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

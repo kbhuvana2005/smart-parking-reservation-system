@@ -4,13 +4,14 @@ import './Sidebar.css';
 
 function Sidebar() {
   const menuItems = [
-    { path: '/dashboard', icon: '🏠', label: 'Dashboard' },
-    { path: '/parking-spots', icon: '🅿️', label: 'Parking Spots' },
-    { path: '/bookings', icon: '📋', label: 'Bookings' },
-    { path: '/users', icon: '👥', label: 'Users' },
-    { path: '/revenue', icon: '💰', label: 'Revenue' },
-    { path: '/qr-scanner', icon: '📷', label: 'QR Scanner' }  // ← Changed to /qr-scanner
-  ];
+  { path: '/dashboard', icon: '🏠', label: 'Dashboard' },
+  { path: '/analytics', icon: '📊', label: 'Analytics' }, 
+  { path: '/parking-spots', icon: '🅿️', label: 'Parking Spots' },
+  { path: '/bookings', icon: '📋', label: 'Bookings' },
+  { path: '/users', icon: '👥', label: 'Users' },
+  { path: '/revenue', icon: '💰', label: 'Revenue' },
+  { path: '/qr-scanner', icon: '📷', label: 'QR Scanner' }
+];
 
   return (
     <aside className="admin-sidebar">

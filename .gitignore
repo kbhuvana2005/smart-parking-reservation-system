@@ -1,8 +1,5 @@
 notepad .gitignore
-```
 
-**Paste this content:**
-```
 # Dependencies
 node_modules/
 */node_modules/

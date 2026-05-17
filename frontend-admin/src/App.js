@@ -15,7 +15,7 @@ import Bookings from './pages/Bookings';
 import Users from './pages/Users';
 import QRScanner from './pages/QRScanner';
 import Revenue from './pages/Revenue';
-
+import Analytics from './pages/Analytics';
 import './App.css';
 
 // Protected Route Component
@@ -49,6 +49,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Navigate to="/dashboard" />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+                  <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
                   <Route path="/parking-spots" element={<ProtectedRoute><ParkingSpots /></ProtectedRoute>} />
                   <Route path="/bookings" element={<ProtectedRoute><Bookings /></ProtectedRoute>} />
                   <Route path="/users" element={<ProtectedRoute><Users /></ProtectedRoute>} />
